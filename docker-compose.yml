@@ -1,9 +1,21 @@
 services:
   router-reviver:
-    build: .
+    build:
+      context: https://github.com/QuixThe2nd/Router-Reviver.git#main
+      dockerfile_inline: >
+        FROM oven/bun:1 as base
+
+        WORKDIR /app
+
+        COPY package.json bun.lock ./
+
+        RUN bun install
+
+        COPY . .
+
+        CMD ["bun", "src/index.ts"]
     container_name: router-reviver
     restart: always
-    environment:
-      - NODE_ENV=production
     volumes:
       - ./config:/config
+networks: {}
