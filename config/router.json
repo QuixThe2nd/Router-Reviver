@@ -1,0 +1,7 @@
+{
+	"host": "http://192.168.1.1/",
+	"password": "admin",
+	"error_severity": 3,
+	"error_text": "PPPError",
+	"recheck_interval": 30000
+}
