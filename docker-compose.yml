@@ -1,0 +1,9 @@
+services:
+  router-reviver:
+    build: .
+    container_name: router-reviver
+    restart: always
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./config:/config
