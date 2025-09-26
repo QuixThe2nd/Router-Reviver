@@ -17,5 +17,5 @@ services:
     container_name: router-reviver
     restart: always
     volumes:
-      - ./config:/config
+      - ./config:/app/config
 networks: {}
